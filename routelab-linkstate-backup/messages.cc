@@ -94,7 +94,7 @@ RoutingMessage::GetSource() const
 }
 
 int
-RoutingMessage::GetDestination() const
+RoutingMessage::GetDest() const
 { 
 	return destination; 
 }

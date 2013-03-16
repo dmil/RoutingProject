@@ -59,10 +59,10 @@
 				public:
 				  Table();
 				  Table(Node me);
-				  bool CheckLatency(int s, int n, double d);
-				  bool WriteTable(int s, int n, double d);
-				  double ReadTable(int s, int n);
-				  int GetNext(int d);
+				  bool CheckLatency(unsigned s, unsigned n, double d);
+				  bool WriteTable(unsigned s, unsigned n, double d);
+				  double ReadTable(unsigned s, unsigned n);
+				  unsigned GetNext(unsigned d);
 				  ostream & Print(ostream &os) const;
 				};
 

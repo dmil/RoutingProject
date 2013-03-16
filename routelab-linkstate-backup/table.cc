@@ -68,7 +68,6 @@ ostream & Table::Print(ostream &os) const { os << "Table()"; return os; }
 		{
 
 		  deque<Link*> *links = n.GetOutgoingLinks();
-
 		  for (deque<Link*>::iterator i = links->begin(); i != links->end(); ++i)
 		  {
 		  	int destination = (*i)->GetDest();

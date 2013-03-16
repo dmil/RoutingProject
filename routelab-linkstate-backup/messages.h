@@ -2,6 +2,7 @@
 #define _messages
 
 #include <iostream>
+#include "messages.h"
 
 using std::ostream;
 
@@ -43,9 +44,6 @@ struct RoutingMessage {
   RoutingMessage(const RoutingMessage &rhs);
   RoutingMessage &operator=(const RoutingMessage &rhs);
 
-  int GetSource() const;
-  int GetDestination() const;
-  int GetLatency() const;
   ostream & Print(ostream &os) const;
 };
 #endif

@@ -10,7 +10,9 @@ class Table;
 class Link;
 class SimulationContext;
 
-//#include "table.h"
+#include "table.h"
+
+using namespace std;
 
 class Node {
  private:
@@ -45,11 +47,10 @@ class Node {
   virtual double GetLatency() const;
   virtual void SetBW(const double b);
   virtual double GetBW() const;
-  virtual std::deque<Link*> *GetOutgoingLinks();
 
   virtual void SendToNeighbors(const RoutingMessage *m);
   virtual void SendToNeighbor(const Node *n, const RoutingMessage *m);
-  virtual std::deque<Node*> *GetNeighbors();
+  virtual deque<Node*> *GetNeighbors();
   virtual void SetTimeOut(const double timefromnow);
 
   //
@@ -61,11 +62,11 @@ class Node {
   virtual Node *GetNextHop(const Node *destination);
   virtual Table *GetRoutingTable() const;
 
-  virtual std::ostream & Print(std::ostream &os) const;
+  virtual ostream & Print(ostream &os) const;
 
 };
 
-inline std::ostream & operator<<(std::ostream &os, const Node &n) { return n.Print(os); }
+inline ostream & operator<<(ostream &os, const Node &n) { return n.Print(os);}
 
 
 #endif
